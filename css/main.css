@@ -1,0 +1,39 @@
+.menu {
+  float: right;
+}
+.menu ul {
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  display: inline-block;
+}
+.menu a {
+  text-decoration: none;
+}
+
+.card-properties {
+  font-size: 22px;
+  padding: 10px 5px;
+  background-color: #ffffff;
+}
+
+.card-1 {
+  color: gray;
+}
+
+.card-2 {
+  color: black;
+}
+
+.card-3 {
+  color: yellow;
+}
+
+.error, .error--serios {
+  border: 1px;
+  background-color: #ff0000d0;
+}
+.error--serios {
+  border-width: 3px;
+}

@@ -1,0 +1,116 @@
+//Vars
+$primary-color: black;
+$cards-color: #839123; 
+$error-color: #ff0000d0;
+$bg-error: #4e2f2f;
+
+
+$font-error: 50px;
+$primary-font: 'Luno', sans-serif;
+
+
+// stack
+%card-properties {
+    font-size: 22px;
+    padding: 5px 15px;
+    background-color: $cards-color;
+}
+
+//with NATIVE CSS
+
+.menu {
+    float: right;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+
+//with PREPROCESSOR
+.menu {
+    float: right;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+// ampersand 
+.description {
+    color: $primary-color;
+    font-family: $primary-font;
+    &:hover {
+        color: #000000;
+    }
+}
+
+// example
+.tools {
+    &-description {
+        text-align: left;
+    }
+    &-item {
+        float: left;
+    }
+    &.items {
+        float: right;
+    }
+}
+
+
+
+// example cards
+
+%card-properties {
+    font-size: 22px;
+    padding: 5px 15px;
+    background-color: rgba($color: #12dc13, $alpha: .9);
+}
+
+.card-1 {
+    color: gray;
+    @extend %card-properties;
+}
+
+.card-2 {
+    color: black;
+    @extend %card-properties;
+}
+
+.card-3 {
+    color: yellow;
+    @extend %card-properties
+}
+
+// error
+
+.error {
+    border: 1px $error-color;
+    background-color: $bg-error;
+    font-size: $font-error;
+
+    &--serios {
+        @extend .error;
+        border-width: 3px;
+    }
+}
