@@ -85,6 +85,8 @@ $primary-font: 'Luno', sans-serif;
     font-size: 22px;
     padding: 5px 15px;
     background-color: rgba($color: #12dc13, $alpha: .9);
+    border: 1px solid #000000;
+    margin: 5px 5px ;
 }
 
 .card-1 {
@@ -114,3 +116,5 @@ $primary-font: 'Luno', sans-serif;
         border-width: 3px;
     }
 }
+
+//test page
